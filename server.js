@@ -24,14 +24,8 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 //routes
-app.use(
-  "https://master--comforting-praline-757aaa.netlify.app/api/v1/user",
-  userRoutes
-);
-app.use(
-  "https://master--comforting-praline-757aaa.netlify.app/api/v1/blog",
-  blogRoutes
-);
+app.use("/api/v1/user", userRoutes);
+app.use("/api/v1/blog", blogRoutes);
 
 // Port
 const PORT = process.env.PORT || 8080;
