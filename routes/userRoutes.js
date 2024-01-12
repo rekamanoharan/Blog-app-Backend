@@ -9,21 +9,12 @@ const {
 const router = express.Router();
 
 // GET ALL USERS || GET
-router.get(
-  "https://master--comforting-praline-757aaa.netlify.app/all-users",
-  getAllUsers
-);
+router.get("/all-users", getAllUsers);
 
 // CREATE USER || POST
-router.post(
-  "https://master--comforting-praline-757aaa.netlify.app/register",
-  registerController
-);
+router.post("/register", registerController);
 
 //LOGIN || POST
-router.post(
-  "https://master--comforting-praline-757aaa.netlify.app/login",
-  loginController
-);
+router.post("/login", loginController);
 
 module.exports = router;
